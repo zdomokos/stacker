@@ -6,10 +6,7 @@ from builtins import bytes, str
 import base64
 import json
 import re
-try:
-    from collections.abc import Mapping, Sequence
-except ImportError:
-    from collections import Mapping, Sequence
+from collections.abc import Mapping, Sequence
 
 import yaml
 

@@ -3,7 +3,7 @@ from __future__ import division
 from __future__ import absolute_import
 import os
 import sys
-import collections
+import collections.abc as collections
 import logging
 
 from stacker.util import load_object_from_string

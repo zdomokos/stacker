@@ -2,7 +2,7 @@ from __future__ import print_function
 from __future__ import division
 from __future__ import absolute_import
 from builtins import object
-import collections
+import collections.abc as collections
 import logging
 
 from stacker.config import Config
