@@ -1,36 +1,35 @@
 import os
 from setuptools import setup, find_packages
 
-VERSION = "1.7.2"
+VERSION = "1.7.3"
 
 src_dir = os.path.dirname(__file__)
 
 install_requires = [
-    "future",
-    "troposphere>=1.9.0",
-    'botocore>=1.12.111',  # matching boto3 requirement
-    "boto3>=1.9.111,<2.0",
-    "PyYAML>=3.13b1",
-    "awacs>=0.6.0",
-    "gitpython>=2.0,<3.0",
-    "jinja2>=2.7,<3.0a",
-    "schematics>=2.0.1,<2.1.0",
+    "boto3",
+    "troposphere",
+    "PyYAML",
+    "awacs",
+    "gitpython",
+    "jinja2",
+    "schematics",
     "formic2",
-    "python-dateutil>=2.0,<3.0",
-    "MarkupSafe<2.0", # 2.0 dropped python 2.7, 3.5 support - temporary
-    "more-itertools<6.0.0", # 6.0.0 dropped python 2.7 support - temporary
-    "rsa==4.5", # 4.6 dropped python 2.7 support - temporary
-    "python-jose<3.2.0", # 3.2.0 dropped python 2.7 support - temporary
+    "python-dateutil",
+    "MarkupSafe",
+    "more-itertools",
+    "rsa",
+    "python-jose",
+    "future",
 ]
 
 setup_requires = ['pytest-runner']
 
 tests_require = [
-    "pytest~=4.3",
-    "pytest-cov~=2.6",
-    "mock~=2.0",
-    "moto[awslambda]~=1.3.16",
-    "testfixtures~=4.10.0",
+    "pytest~=7.0.0",
+    "pytest-cov~=4.0",
+    "mock~=5.0",
+    "moto[awslambda]~=4.0.0",
+    "testfixtures~=7.0.0",
     "flake8-future-import",
 ]
 
@@ -68,8 +67,6 @@ if __name__ == "__main__":
             "Development Status :: 5 - Production/Stable",
             "Environment :: Console",
             "License :: OSI Approved :: BSD License",
-            "Programming Language :: Python :: 2.7",
-            "Programming Language :: Python :: 3.5",
-            "Programming Language :: Python :: 3.6",
+            "Programming Language :: Python :: 3.5+",
         ],
     )
