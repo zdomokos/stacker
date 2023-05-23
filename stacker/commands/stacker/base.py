@@ -27,6 +27,10 @@ def cancel():
     """Returns a threading.Event() that will get set when SIGTERM, or
     SIGINT are triggered. This can be used to cancel execution of threads.
     """
+    is_main_thread = threading.current_thread() == threading.main_thread()
+    if not is_main_thread:
+        return None
+            
     cancel = threading.Event()
 
     def cancel_execution(signum, frame):
